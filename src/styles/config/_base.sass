@@ -1,0 +1,136 @@
+*,*::before,*::after 
+	box-sizing: border-box
+
+body, html
+	font-family: $font-family-default
+	font-weight: $font-weight-normal
+	font-size: 16px
+	line-height: 1.7
+	color: $color-primary
+	background-color: $color-bgc
+	position: relative
+	cursor: auto
+	@include sm 
+		font-size: 15px
+	::selection 
+		background-color: $color-selection
+
+// 文字 START
+.h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6
+	font-weight: $font-weight-bold
+	color: $color-primary
+.h1, h1, .h2, h2, .h3, h3
+	margin-top: 1.75rem
+.h4, h4, .h5, h5, .h6, h6
+	margin-top: 1.25rem
+.h1, h1
+	font-size: $font-size-h1
+.h2, h2
+	font-size: $font-size-h2
+.h3, h3
+	font-size: $font-size-h3
+.h4, h4
+	font-size: $font-size-h4
+.h5, h5
+	font-size: $font-size-h5
+.h6, h6
+	font-size: $font-size-h6
+p 
+	font-size: $font-size-base
+	font-weight: $font-weight-normal
+	color: $color-secondary
+	margin-top: .75rem
+strong 
+	font-weight: $font-weight-normal
+	color: $color-primary
+// 文字 END
+ul,ol 
+	padding-left: 1.5rem
+ul 
+	list-style: disc
+ol 
+	list-style: decimal
+li 
+	color: $color-secondary
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+a
+	font-size: $font-size-base
+	font-weight: $font-weight-normal
+	color: $color-secondary
+	text-decoration: none
+	cursor: pointer
+	&:hover 
+		color: $color-emphasis
+.dashed-underline
+	text-decoration: underline
+	text-underline-offset: 8px
+	text-decoration-style: dashed 
+	-webkit-text-decoration-style: dashed
+
+span 
+	color: $color-secondary
+
+strong 
+	color: $color-primary
+	background: linear-gradient(transparent 85%, $color-emphasis 0%)
+
+img
+	max-width: 100%
+	height: auto
+
+hr 
+	margin-top: 3rem
+	margin-bottom: 3rem
+	border: dashed 1px $color-line
+
+button 
+	background: none 
+	border: none
+
+.goback-btn
+	background: none
+	border: none
+	color: $color-secondary
+	font-size: toRem(20px)
+	cursor: pointer
+	text-decoration: underline
+	text-underline-offset: 8px
+	text-decoration-style: dashed 
+	-webkit-text-decoration-style: dashed
+	&:hover 
+		color: $color-emphasis
+	&__icon
+		vertical-align: middle
+		transform: translateY(-1px)
+
+
+.cursor-inner, .cursor-outer 
+	position: absolute
+	top: 0
+	left: 0
+	border-radius: 50%
+	// min-blend-mode: exclusion
+	pointer-events: none
+	z-index: 100
+	
+	
+// .cursor-inner
+// 	width: 12px
+// 	height: 12px
+// 	margin-left: -6px
+// 	margin-top: -6px
+// 	background-color: #F9C770
+// 	opacity: .4
+
+.cursor-outer
+	width: 60px
+	height: 60px
+	margin-left: -30px
+	margin-top: -30px
+	background-color: #F9C770
+	opacity: .25
+

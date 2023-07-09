@@ -1,0 +1,25 @@
+.pagination
+  display: flex
+  justify-content: center
+  align-items: center 
+  list-style: none
+  &__link
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 10px
+    cursor: pointer
+    width: toRem(40px)
+    height: toRem(40px)
+    color: $color-secondary
+    border: solid 1px $color-secondary
+    border-radius: 8px
+    font-size: toRem(18px)
+    &:hover 
+      color: $color-emphasis
+      border: solid 1px $color-emphasis
+  &__item--active
+    .pagination__link
+      border: solid 1px $color-emphasis
+      background-color: $color-emphasis
+      color: $color-primary

@@ -1,0 +1,17 @@
+.section__title
+  position: relative
+  display: inline-block
+  padding: 0 10px
+  z-index: 1
+  &::after
+    content: ''
+    display: block
+    background-color: $color-frame-dark
+    width: auto
+    height: 24px
+    position: absolute
+    bottom: -2px
+    left: 0
+    right: 0
+    z-index: -1
+    

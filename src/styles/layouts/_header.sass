@@ -1,0 +1,36 @@
+.header
+  width: 100%
+  z-index: 50
+
+  &__content
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column
+    border-bottom: solid 1px $color-line
+  &__logo, &__logosub
+    font-family: $font-family-head
+    font-weight: $font-weight-bold
+    color: $color-primary
+  &__logo
+    font-size: $font-size-big
+    line-height: 1.2
+  &__logosub 
+    font-size: $font-size-h2
+    line-height: 1.4
+  &__nav 
+    display: flex 
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    &__item
+      font-size: toRem(18px)
+      font-weight: $font-weight-normal
+      transition: all .3s
+      @include sm
+        flex: 1 1 33.33333%
+      &:hover
+        color: $color-emphasis
+      &.header__nav__item--active
+        color: $color-emphasis
+      
+      

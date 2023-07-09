@@ -1,0 +1,180 @@
+
+/* RWD START */ 
+
+$grid-breakpoints: ('': false,xl: 1199px,lg: 991px,md: 767px,sm: 575px)
+// @mixin xxl
+//   @media(max-width: 1199px) 
+//     @content
+@mixin xl
+  @media(max-width: 1199px) 
+    @content
+@mixin lg
+  @media(max-width: 991px) 
+    @content
+@mixin md
+  @media(max-width: 767px) 
+    @content
+@mixin sm
+  @media(max-width: 575px) 
+    @content
+// @mixin xs
+//   @media(max-width: $bk-xs) 
+//     @content
+// @mixin mblg
+//   @media(max-width: $bk-mblg) 
+//     @content
+// @mixin mbsm
+//   @media(max-width: $bk-mbsm) 
+//     @content
+// @mixin mbxs
+//   @media(max-width: $bk-mbxs) 
+//     @content
+
+  /* RWD END */
+
+
+$font-size-16: 16px
+@function toRem($px)
+  @return ($px / $font-size-16) * 1rem
+
+
+  //icon
+// @mixin icon($img: icon,$p: 0px 0px,$size: 100px 100px)
+// 	background-size: $size
+// 	background-repeat: no-repeat
+// 	background-image: url($path+$img+".png")
+// 	background-position: $p
+//hover-second
+// @mixin hover-second($s:.3s)
+// 	transition-timing-function: ease
+// 	transition-duration: $s
+    
+// @mixin hover-second-o($s:.3s)
+// 	transition: opacity $s ease
+
+// 漸層 有角度  https://www.colorzilla.com/gradient-editor/
+// @mixin gradient_deg($deg, $c1, $c2, $c1_per, $c2_per)
+//   background:	$c1
+//   background: -moz-linear-gradient($deg,$c1 $c1_per,$c2 $c2_per)
+//   background: -webkit-linear-gradient($deg,$c1 $c1_per,$c2 $c2_per)
+//   background: linear-gradient($deg,$c1 $c1_per,$c2 $c2_per)
+
+
+// /*-------------------------
+//       function mixin
+// -------------------------*/
+
+// // form
+// @mixin input_placeholder($color){
+//   &::-webkit-input-placeholder {
+//     color: $color;
+//   }
+//   &::-moz-placeholder {
+//     color: $color;
+//   }
+//   &:-ms-input-placeholder {
+//     color: $color;
+//   }
+//   &:-moz-placeholder {
+//     color: $color;
+//   }
+// }
+// // form END
+
+
+// //漸層 左到右
+// @mixin gradient_hori($color_1,$color_2,$color_3){
+//   background: $color_2;
+//   background: -moz-linear-gradient(left, $color_1, $color_2, $color_3); 
+//   background: -webkit-linear-gradient(left, $color_1,$color_2,$color_3); 
+//   background: linear-gradient(to right, $color_1,$color_2,$color_3); 
+// }
+// //漸層 上到下
+// @mixin gradient_vertical($color_1,$color_2,$color_3){
+//   background: $color_2;
+//   background: -moz-linear-gradient(top, $color_1, $color_2, $color_3); 
+//   background: -webkit-linear-gradient(top, $color_1,$color_2,$color_3); 
+//   background: linear-gradient(to bottom, $color_1,$color_2,$color_3); 
+// }
+
+// // 文字常用set
+// @mixin text_set($fz,$fw,$color){
+//   font-size: $fz;
+//   font-weight: $fw;
+//   color: $color;
+// }
+
+// // 20190723
+// @mixin bg_image($url:'',$size:auto,$position: center,$repeat: no-repeat) {
+//   background-image: url($url);
+//   background-size: $size;
+//   background-position: $position;
+//   background-repeat: $repeat;
+// }
+ 
+
+// @function toRem($num){
+//   @return ($px / basic-font-size) * 1rem;
+// }
+
+
+// $bk-xlg: 1700px
+// $bk-lg: 1400px
+// $bk-md: 1199px
+// $bk-tb: 991px
+// $bk-sm: 767px
+// $bk-xs: 575px
+// $bk-mblg: 480px //for iphone6 Plus
+// $bk-mbsm: 413px //for iphone6~X
+// $bk-mbxs: 374px //for iphone5、SE
+
+@mixin clearfix()
+  &::after 
+    display: block
+    clear: both
+    content: ""
+
+// 隱藏文字
+@mixin hide-text 
+  text-indent: 110%
+  white-space: nowrap
+  overflow: hidden
+
+// @mixin button($bgColor:#eee,$fontColor: black)
+//   display: inline-block
+//   padding: 10px 20px
+//   background-color: $bgColor
+//   color: $fontColor
+//   transition: .3s
+//   &.lg
+//     padding: $paddingLg
+//   &.md
+//     padding: $paddingMd
+//   &.sm
+//     padding: $paddingSm
+//   &:hover
+//     background-color: darken($bgColor, 7)
+
+@mixin size($w,$h:$w)
+  width: $w
+  height: $h
+
+
+// 上下左右置中 flex 版本
+@mixin flexCenter
+  display: flex
+  justify-content: center
+  align-items: center
+
+// 元素上下左右置中 absolute
+@mixin abCenter
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+
+
+
+
+
+
