@@ -1,3 +1,4 @@
+import RenderTip from "./RenderTip";
 
 const TodoItem = (props) => {
   const { id, text, done, onToggleDone, onDeleteItem } = props;
@@ -11,6 +12,7 @@ const TodoItem = (props) => {
 
   return (
     <li className="todoitem">
+      <RenderTip />
       <div className="todoitem__content">
         <label className="todoitem__label" htmlFor={ id }>
           <input 
