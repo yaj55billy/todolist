@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React , { useState } from "react";
 import RenderTip from "./RenderTip";
 
 const TodoForm = (props) => {
@@ -27,4 +27,4 @@ const TodoForm = (props) => {
   )
 }
 
-export default TodoForm;
+export default React.memo(TodoForm);

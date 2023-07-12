@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 
 import TodoItem from "./TodoItem";
 import TodoForm from "./TodoForm";
@@ -29,16 +29,18 @@ const TodoList = () => {
   }
 
   // 新增項目
-  const atAddItem = (input) => {
+  const atAddItem = useCallback((input) => {
     const newItem = {
       id: new Date().getTime().toString(),
       text: input,
       done: false
     }
 
-    const newList = [...list, newItem];
-    setList(newList);
-  }
+    // const newList = [...list, newItem];
+    setList((prevList) => {
+      return [...prevList, newItem];
+    });
+  }, []);
 
   
   // 刪除項目
